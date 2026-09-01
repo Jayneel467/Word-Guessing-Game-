@@ -25,7 +25,11 @@ def evaluate_guess(word, guess, guessed_letters):
     guess = guess.lower()
     guessed_letters = set(guessed_letters)
     if guess in guessed_letters:
-        return {"correct": False, "guessed_letters": guessed_letters, "message": "You already guessed this character."}
+        return {
+            "correct": False,
+            "guessed_letters": guessed_letters,
+            "message": "You already guessed this character.",
+        }
 
     guessed_letters.add(guess)
     return {
@@ -85,4 +89,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
